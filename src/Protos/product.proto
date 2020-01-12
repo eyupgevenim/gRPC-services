@@ -1,0 +1,34 @@
+syntax = "proto3";
+
+option csharp_namespace = "Grpc.Server.GrpcServices";
+
+package ProductGrpc;
+
+
+message Product{
+	int32 id = 1;
+	string name = 2;
+	string description = 3;
+	string picture_uri = 4;
+	ProductBrand product_brand = 5;
+}
+
+message ProductBrand{
+	int32 id = 1;
+    string name = 2;
+}
+
+message VendorProduct{
+	int32 id = 1;
+    double price = 2;
+    int32 available_stock = 3;
+    int32 max_stock_threshold = 4;
+	Vendor vendor = 5;
+	Product product = 6;
+}
+
+message Vendor{
+	int32 id = 1;
+    string name = 2;
+	string description = 3;
+}

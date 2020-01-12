@@ -1,0 +1,16 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Protobuf Include="..\Protos\catalog.proto" GrpcServices="Client" Link="Protos\catalog.proto" />
+    <Protobuf Include="..\Protos\order.proto" GrpcServices="Client" Link="Protos\order.proto" />
+
+    <PackageReference Include="Grpc.AspNetCore" Version="2.26.0" />
+  </ItemGroup>
+
+
+</Project>
