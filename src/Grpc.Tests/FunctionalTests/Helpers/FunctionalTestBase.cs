@@ -10,7 +10,7 @@ namespace Grpc.Tests.FunctionalTests.Helpers
 {
     public class FunctionalTestBase : IClassFixture<GrpcServerFactory<Startup>>, IDisposable
     {
-        private const string Address = "https://localhost:5001";
+        protected const string Address = "https://localhost:5001";
         protected readonly GrpcChannel _channel;
         protected readonly HttpClient _client;
         public FunctionalTestBase(GrpcServerFactory<Startup> factory)
